@@ -101,9 +101,10 @@ self.addEventListener('fetch', function(event) {
       console.log(event.request.url);
       if(event.request.url == 'https://push24.github.io/pages/a.html')
       {
+        alert("a");
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
-                 {  console.log('add new page to cache');
+                 {  console.log('add page a to cache');
                     cache.add('https://push24.github.io/small.mp4');
                   
                 });
@@ -111,17 +112,19 @@ self.addEventListener('fetch', function(event) {
       }
       else if(event.request.url == 'https://push24.github.io/pages/b.html')
       {
+        alert("b");
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
-                 {  console.log('add new page to cache');
+                 {  console.log('add page b to cache');
                     cache.add('https://push24.github.io/vb.mp4');
                 });
       }
       else if(event.request.url == 'https://push24.github.io/pages/c.html')
       {
+        alert("c");
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
-                 {  console.log('add new page to cache');
+                 {  console.log('add page c to cache');
                     cache.add('https://push24.github.io/vc.mp4');         
                 });
       }
