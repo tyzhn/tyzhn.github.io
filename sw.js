@@ -12,7 +12,6 @@ self.addEventListener('install', function(event) {
     // The videos are stored remotely with CORS enabled.
     //'https://prefetch-video-sample.storage.googleapis.com/gbike.webm',
     //'https://prefetch-video-sample.storage.googleapis.com/gbike.mp4'
-   
   ];
 
 
@@ -110,6 +109,23 @@ self.addEventListener('fetch', function(event) {
                 });
         
       }
+      else if(event.request.url == 'https://push24.github.io/pages/b.html')
+      {
+        caches.open(CURRENT_CACHES.prefetch)
+                .then(cache =>
+                 {  console.log('add new page to cache');
+                    cache.add('https://push24.github.io/vb.mp4');
+                });
+      }
+      else if(event.request.url == 'https://push24.github.io/pages/c.html')
+      {
+        caches.open(CURRENT_CACHES.prefetch)
+                .then(cache =>
+                 {  console.log('add new page to cache');
+                    cache.add('https://push24.github.io/vc.mp4');         
+                });
+      }
+
         return caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
                  {  console.log('add new page to cache');
