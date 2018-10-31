@@ -99,28 +99,28 @@ self.addEventListener('fetch', function(event) {
       return fetch(event.request).then(function(response) {
         console.log('Response from network is:', response);
       console.log(event.request.url);
-      if(event.request.url == 'https://push24.github.io/pages/a.html')
+      if(event.request.url == 'https://tyzhn.github.io/pages/a.html')
       {
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
                  {  console.log('add page a to cache');
-                    cache.add('https://push24.github.io/small.mp4');
+                    cache.add('https://tyzhn.github.io/small.mp4');
                 });
       }
-      else if(event.request.url == 'https://push24.github.io/pages/b.html')
+      else if(event.request.url == 'https://tyzhn.github.io/pages/b.html')
       {
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
                  {  console.log('add page b to cache');
-                    cache.add('https://push24.github.io/vb.mp4');
+                    cache.add('https://tyzhn.github.io/vb.mp4');
                 });
       }
-      else if(event.request.url == 'https://push24.github.io/pages/c.html')
+      else if(event.request.url == 'https://tyzhn.github.io/pages/c.html')
       {
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
                  {  console.log('add page c to cache');
-                    cache.add('https://push24.github.io/vc.mp4');         
+                    cache.add('https://tyzhn.github.io/vc.mp4');         
                 });
       }
 
