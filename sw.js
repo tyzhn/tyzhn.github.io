@@ -102,7 +102,7 @@ self.addEventListener('fetch', function(event) {
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
                  {  console.log('add page a to cache');
-                    cache.add('https://tyzhn.github.io/small.mp4;base64,AAAAA /...../ AA');
+                    cache.add('https://tyzhn.github.io/small.mp4');
                 });
       }
       else if(event.request.url == 'https://tyzhn.github.io/pages/b.html')
@@ -110,7 +110,7 @@ self.addEventListener('fetch', function(event) {
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
                  {  console.log('add page b to cache');
-                    cache.add('https://tyzhn.github.io/vb.mp4;base64,AAAAA /...../ AA');
+                    cache.add('https://tyzhn.github.io/vb.mp4');
                 });
       }
       else if(event.request.url == 'https://tyzhn.github.io/pages/c.html')
@@ -118,7 +118,7 @@ self.addEventListener('fetch', function(event) {
         caches.open(CURRENT_CACHES.prefetch)
                 .then(cache =>
                  {  console.log('add page c to cache');
-                    cache.add('https://tyzhn.github.io/vc.mp4;base64,AAAAA /...../ AA');         
+                    cache.add('https://tyzhn.github.io/vc.mp4');         
                 });
       }
 
