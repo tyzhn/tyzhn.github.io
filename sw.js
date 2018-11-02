@@ -7,7 +7,7 @@ self.addEventListener('install', function(event) {
     './',
     'https://tyzhn.github.io/small.mp4',
     'https://tyzhn.github.io/vb.mp4',
-    ''https://tyzhn.github.io/vc.mp4'
+    'https://tyzhn.github.io/vc.mp4'
     //'index.js',
     //'../../styles/main.css',
     //'static/poster.jpg',
