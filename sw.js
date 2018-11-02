@@ -41,7 +41,7 @@ self.addEventListener('activate', function(event) {
           if (expectedCacheNames.indexOf(cacheName) === -1) {
             // If this cache name isn't present in the array of "expected" cache names, then delete it.
             console.log('Deleting out of date cache:', cacheName);
-            //return caches.delete(cacheName);
+            return caches.delete(cacheName);
           }
         })
         );
@@ -76,7 +76,7 @@ self.addEventListener('fetch', function(event) {
             status: 206,
             statusText: 'Partial Content',
             headers: [
-               ['Content-Type', 'video/mp4'],
+              ['Content-Type', 'video/mp4'],
               ['Content-Range', 'bytes ' + pos + '-' +
                 (ab.byteLength - 1) + '/' + ab.byteLength]]
           });
