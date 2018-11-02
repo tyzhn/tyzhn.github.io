@@ -1,6 +1,5 @@
-var CACHE_VERSION = 2;
 var CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+  prefetch: 'sw-example'
 };
 
 self.addEventListener('install', function(event) {
@@ -17,7 +16,6 @@ self.addEventListener('install', function(event) {
 
   // All of these logging statements should be visible via the "Inspect" interface
   // for the relevant SW accessed via chrome://serviceworker-internals
-  console.log('Handling install event. Resources to prefetch:', urlsToPrefetch);
 
   self.skipWaiting();
 
